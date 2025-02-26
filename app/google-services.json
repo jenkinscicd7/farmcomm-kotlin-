@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "956703779076",
+    "project_id": "farme-comm123",
+    "storage_bucket": "farme-comm123.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:956703779076:android:af6ba10a4bf303a3084851",
+        "android_client_info": {
+          "package_name": "com.example.farm_comm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPr3zSM9IZjH31zNr2ZskVvpP3DEPH1SU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
