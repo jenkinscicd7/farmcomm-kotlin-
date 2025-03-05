@@ -10,5 +10,10 @@
     <string name="welcome_to_app">welcome to app</string>
     <string name="products">Products</string>
     <string name="JordanDesciption">Air Jordan is a line of basketball shoes and athletic clothing produced by American corporation Nike. The first Air Jordan shoe was produced for Hall of Fame former basketball player Michael Jordan</string>
+    <string name="back_to_products">Back to products</string>
+    <string name="shopping_cart">Shopping cart</string>
+    <string name="home">Home</string>
+    <string name="category">Category</string>
+    <string name="favorite">Favorite</string>
 
 </resources>

@@ -30,16 +30,6 @@
                 tools:src="@tools:sample/backgrounds/scenic"
                 android:contentDescription="Product image" />
 
-            <ImageButton
-                android:id="@+id/favoriteButton"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_margin="8dp"
-                android:background="@drawable/favorite_button_background"
-                android:src="@drawable/ic_favorite"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="Add to favorites" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <!-- Product Name -->

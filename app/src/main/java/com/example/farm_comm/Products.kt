@@ -1,5 +1,6 @@
 package com.example.farm_comm
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -8,22 +9,24 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.room.util.query
 import com.example.farm_comm.adapter.ProductAdapter
-import com.example.farm_comm.model.Product
+import com.example.farm_comm.ui.theme.model.Product
+import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 
 class Products : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var auth:FirebaseAuth
     private lateinit var productAdapter: ProductAdapter
-    private lateinit var databaseReference:DatabaseReference
-    private val productList = mutableListOf<Product>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,13 +34,25 @@ class Products : AppCompatActivity() {
         setContentView(R.layout.activity_products)
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
+
+
         // Initialize your RecyclerView, adapter, etc.
-        recyclerView = findViewById(R.id.productsRecyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        databaseReference = FirebaseDatabase.getInstance().getReference("items")
+        val recyclerView: RecyclerView = findViewById(R.id.productsRecyclerView)
+        recyclerView.layoutManager = GridLayoutManager(this, 2) // 2 columns in grid layout
+
+        val productList = listOf(
+            Product(R.drawable.knapsack_battery_operated
+            ,"$1999", "Agricultural sprayer"),
+            Product(R.drawable.gardening_hoe,"$99", "gardening jembe")
+
+        )
+
+        val adapter = ProductAdapter(productList)
+        recyclerView.adapter = adapter
 
 
-                // ...
+
+        // ...
 
                 // Set up bottom navigation
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottomNavigation)
@@ -55,28 +70,31 @@ class Products : AppCompatActivity() {
                 }
             }
 
-            private fun showLogoutDialog() {
-                AlertDialog.Builder(this)
-                    .setTitle("Logout")
-                    .setMessage("Are you sure you want to logout?")
-                    .setPositiveButton("Yes") { _, _ ->
+
+    private fun showLogoutDialog() {
+        AlertDialog.Builder(this)
+            .setTitle("Logout")
+            .setMessage("Are you sure you want to logout?")
+            .setPositiveButton("Yes") { _, _ ->
                         // Sign out from Firebase
-                        auth.signOut()
+                auth.signOut()
 
                         // Redirect to login screen
-                        val intent = Intent(applicationContext, Login::class.java)
+                val intent = Intent(applicationContext, Login::class.java)
                         // Clear back stack
-                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                        startActivity(intent)
-                        finish()
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+                finish()
                     }
-                    .setNegativeButton("No") { dialog, _ ->
+                .setNegativeButton("No") { dialog, _ ->
                         dialog.dismiss()
                     }
                     .show()
             }
-        }
 
+
+
+}
 
 
 
