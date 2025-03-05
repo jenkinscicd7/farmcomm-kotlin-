@@ -11,7 +11,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.farm_comm.ProductDetails
 import com.example.farm_comm.R
-import com.example.farm_comm.ui.theme.model.Product
+import com.example.farm_comm.model.Product
 
 
 class ProductAdapter(private val productList: List<Product>) :

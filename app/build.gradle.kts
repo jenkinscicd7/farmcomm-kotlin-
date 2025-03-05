@@ -73,6 +73,8 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
+    implementation(libs.play.services.auth)
+    implementation(libs.facebook.android.sdk)
 
 
     testImplementation(libs.junit)

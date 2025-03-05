@@ -1,4 +1,4 @@
-package com.example.farm_comm.ui.theme.model
+package com.example.farm_comm.model
 
 data class Product(
     val picUrl: Int,

@@ -10,18 +10,14 @@
     android:padding="15dp"
     tools:context=".Login">
 
-
     <TextView
-
         android:text="@string/login"
         android:textSize="25sp"
         android:textStyle="bold"
         android:gravity="center"
         android:layout_marginBottom="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        />
+        android:layout_height="wrap_content" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -29,11 +25,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email"
             android:hint="@string/email"
-
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </com.google.android.material.textfield.TextInputEditText>
+            android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -42,29 +35,21 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password"
             android:hint="@string/password"
-
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </com.google.android.material.textfield.TextInputEditText>
+            android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ProgressBar
         android:id="@+id/progressBar"
         android:visibility="gone"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
-
-
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btn_login"
         android:text="@string/login"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        />
+        android:layout_height="wrap_content" />
 
     <TextView
         android:textStyle="bold"
@@ -74,9 +59,26 @@
         android:id="@+id/registerNow"
         android:text="@string/click_to_register"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" />
 
-        />
+    <!-- Text to indicate alternative sign-in options -->
+    <TextView
+        android:id="@+id/signInOptionsText"
+        android:text="Or sign in with other options"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Google Sign-In Button -->
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/googleSignInButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
 
 
 </LinearLayout>

@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.util.query
 import com.example.farm_comm.adapter.ProductAdapter
-import com.example.farm_comm.ui.theme.model.Product
+import com.example.farm_comm.model.Product
 import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
@@ -42,7 +42,7 @@ class Products : AppCompatActivity() {
 
         val productList = listOf(
             Product(R.drawable.knapsack_battery_operated
-            ,"$1999", "Agricultural sprayer"),
+            ,"$1999", "Knapsacksprayer"),
             Product(R.drawable.gardening_hoe,"$99", "gardening jembe")
 
         )
