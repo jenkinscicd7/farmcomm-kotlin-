@@ -42,8 +42,14 @@ class Products : AppCompatActivity() {
 
         val productList = listOf(
             Product(R.drawable.knapsack_battery_operated
-            ,"$1999", "Knapsacksprayer"),
-            Product(R.drawable.gardening_hoe,"$99", "gardening jembe")
+            ,"ksh3500", "Knapsacksprayer"),
+            Product(R.drawable.gardening_hoe,"ksh599", "gardening jembe"),
+            Product(R.drawable.transformer_chloropyriphos_insecticide,
+                "ksh199", "maize insecticide"),
+            Product(R.drawable.r1, "ksh3400", "hand sprayer"),
+            Product(R.drawable.oip1, "ksh1500", "fertiliser"),
+            Product(R.drawable.product, "ksh900", "granular fertiliser"),
+
 
         )
 
