@@ -36,7 +36,7 @@ class Register : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_register)
-        auth = FirebaseAuth.getInstance();
+        auth = FirebaseAuth.getInstance()
         editTextEmail = findViewById(R.id.email)
         editTextPassword = findViewById(R.id.password)
         buttonReg = findViewById(R.id.btn_register)

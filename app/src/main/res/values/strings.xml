@@ -13,7 +13,14 @@
     <string name="back_to_products">Back to products</string>
     <string name="shopping_cart">Shopping cart</string>
     <string name="home">Home</string>
+    <string name="search_here">Search here</string>
     <string name="category">Category</string>
     <string name="favorite">Favorite</string>
+    <string name="search_icon">Search icon</string>
+    <string name="Or_sign_in_with_other_options">Or sign in with other options</string>
+    <string name="Add_to_Cart">Add to Cart</string>
+    <string name="Share_Product">Share Product</string>
+
+
 
 </resources>

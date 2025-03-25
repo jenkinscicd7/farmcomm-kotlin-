@@ -12,7 +12,7 @@
         android:id="@+id/searchBarCardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="32dp"
         app:cardCornerRadius="24dp"
         app:cardElevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,17 +33,19 @@
                 android:layout_height="24dp"
                 android:layout_marginStart="8dp"
                 android:src="@drawable/ic_search"
-                android:contentDescription="Search icon" />
+                android:contentDescription="@string/search_icon" />
 
             <EditText
                 android:id="@+id/searchEditText"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:autofillHints="search"
                 android:background="@null"
-                android:hint="Search here..."
+                android:hint="@string/search_here"
                 android:inputType="text"
                 android:padding="8dp"
-                android:textColorHint="#9E9E9E"
+                android:textColorHint="#757575"
                 android:textSize="16sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -56,7 +58,6 @@
         android:id="@+id/productsRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
         android:clipToPadding="false"
         android:padding="8dp"
         app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
